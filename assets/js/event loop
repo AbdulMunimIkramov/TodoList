@@ -1,0 +1,42 @@
+edventListener - тоже является ассинхронностью
+
+promise{
+    than{
+        resolve
+    }       
+    catch{
+        reject
+    }
+}
+
+цикл событий - Event loop{
+    менханизм для работы с ассинхронностью в браузере
+}
+
+//синхронный код
+console.log(1)
+console.log(2)
+
+setTimeout(()=>{
+    console.log(4)
+}, 0)
+
+console.log(3)
+
+Call stack - очередь вызовов{
+    1
+    2
+    setTimeout 4(выходит из call stack)
+    3
+    setTimeout 4(после Event loop попадает сюда в обычном виде)
+}
+
+setTimeout(переносится сюда)->
+BrowserAPI{
+    setTimeout 4(после обработки попадает в Event loop)
+}
+
+Event Queue / Event loop(цикл событий){
+    setTimeout 4(после попадает в Call stack)
+}
+
