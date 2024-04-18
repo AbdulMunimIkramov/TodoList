@@ -25,7 +25,8 @@ const createAndAddTodo = (title, desc) => {
         div.style.marginTop = '20px'
 
         h4.className = 'todo_title'
-        h4.innerText = title
+        h4.style.color = 'green'
+        h4.innerText = `${'название:'}${title}`
 
         p.className = 'todo_desc'
         p.innerText = desc
